@@ -33,14 +33,14 @@ if (realpath(__FILE__) == realpath($_SERVER['SCRIPT_FILENAME'])) {
 | Default: localhost                                      |
 |                                                         |
 ---------------------------------------------------------*/
-$dbhost = '%dbhost%';
+$dbhost = 'localhost';
 
 /*----[ $dbname ] ----------------------------------------
 |                                                         |
 | The name of your database that holds your tables        |
 |                                                         |
 ---------------------------------------------------------*/
-$dbname = '%dbname%';
+$dbname = 'your_database_name';
 
 /*----[ $dbuname ] ---------------------------------------
 |                                                         |
@@ -48,14 +48,14 @@ $dbname = '%dbname%';
 | permissions                                             |
 |                                                         |
 ---------------------------------------------------------*/
-$dbuname = '%dbuname%';
+$dbuname = 'your_database_username';
 
 /*----[ $dbpass ] ----------------------------------------
 |                                                         |
 | The password associated with your db usersname          |
 |                                                         |
 ---------------------------------------------------------*/
-$dbpass = '%dbpass%';
+$dbpass = 'your_database_password';
 
 /*----[ $dbtype ] ----------------------------------------
 |                                                         |
@@ -68,14 +68,14 @@ $dbpass = '%dbpass%';
 | Default: mysqli                                         |
 |                                                         |
 ---------------------------------------------------------*/
-$dbtype = '%dbtype%';
+$dbtype = 'mysqli';
 
 /*----[ $prefix ] ----------------------------------------
 |                                                         |
 | The prefix for your PHP-Nuke Titanium tables            |
 |                                                         |
 ---------------------------------------------------------*/
-$prefix = '%prefix%';
+$prefix = 'nuke';
 
 /*----[ $user_prefix ] -----------------------------------
 |                                                         |
@@ -83,7 +83,7 @@ $prefix = '%prefix%';
 | Do not change this unless it is really needed           |
 |                                                         |
 ---------------------------------------------------------*/
-$user_prefix = '%user_prefix%';
+$user_prefix = 'nuke';
 
 /*----[ $admin_file ] ------------------------------------
 |                                                         |
