@@ -1,0 +1,9 @@
+General purpose self-explanatory file with headlines
+%%
+Welcome to The 86it Arcade!
+/modules.php?name=Blogs&file=article&sid=50
+Saturday, October 29
+WebMaster
+The 86it Dev Team
+0
+
