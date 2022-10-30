@@ -332,15 +332,18 @@ $avatar_img = '';
 if ($user_avatar_type && $user_allowavatar) {
         switch($user_avatar_type) {
                 case USER_AVATAR_UPLOAD:
-                        $avatar_img = ($board_config['allow_avatar_upload']) ? '<img class="rounded-corners-user-info" src="' . $board_config['avatar_path'] . '/' . $user_avatar . '" alt="" border="0" hspace="20" align="center" valign="center" onload="resize_avatar(this)"/>' : '';
+                        $avatar_img = ($board_config['allow_avatar_upload']) ? '<img class="rounded-corners-user-info" 
+						src="' . $board_config['avatar_path'] . '/' . $user_avatar . '" alt="" border="0" hspace="20" align="center" valign="center" onload="resize_avatar(this)"/>' : '';
                         break;
 
                 case USER_AVATAR_REMOTE:
-                        $avatar_img = ($board_config['allow_avatar_remote']) ? '<img class="rounded-corners-user-info" src="' . $user_avatar . '" alt="" border="0"  hspace="20" align="center" valign="center"  onload="resize_avatar(this)"/>' : '';
+                        $avatar_img = ($board_config['allow_avatar_remote']) ? '<img class="rounded-corners-user-info" 
+						src="' . $user_avatar . '" alt="" border="0"  hspace="20" align="center" valign="center"  onload="resize_avatar(this)"/>' : '';
                         break;
 
                 case USER_AVATAR_GALLERY:
-                        $avatar_img = ($board_config['allow_avatar_local']) ? '<img class="rounded-corners-user-info" src="' . $board_config['avatar_gallery_path'] . '/' . $user_avatar . '" alt="" border="0"  hspace="20" align="center" valign="center"  onload="resize_avatar(this)"/>' : '';
+                        $avatar_img = ($board_config['allow_avatar_local']) ? '<img class="rounded-corners-user-info" 
+						src="' . $board_config['avatar_gallery_path'] . '/' . $user_avatar . '" alt="" border="0"  hspace="20" align="center" valign="center"  onload="resize_avatar(this)"/>' : '';
                         break;
         }
 }
@@ -352,6 +355,18 @@ if ($arcade_config['display_winner_avatar']) {
                 $template->assign_block_vars('avatar_best_player_left',array());
         }
 
+        if(empty($best_user))
+		$best_user = 'NO CHAMPION YET';
+
+        if(empty($best_time))
+		$best_time = '0';
+
+        if(empty($games_played))
+		$games_played = '0';
+
+        if(empty($best_date))
+		$best_date = 'The 1st of Never';
+		
         $template->assign_vars(array(
            'L_ACTUAL_WINNER' => $lang['Actual_winner'],
            'BEST_USER_NAME' => $best_user,

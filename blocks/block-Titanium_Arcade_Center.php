@@ -365,8 +365,8 @@ if ($whos_playing)
   if ($nbplayers != 0) 
   {
     $content .="<tr>\n";
-    $content .="<td class=\"arcadeRow2\"><strong>Game</strong></td>\n";
-    $content .="<td class=\"arcadeRow2\"><strong>Users</strong></td>\n";
+    $content .="<td class=\"arcadeRow1\"><strong>Game</strong></td>\n";
+    $content .="<td class=\"arcadeRow1\"><strong>Users</strong></td>\n";
 
     for ($i=0 ; $i<$nbplayers ; $i++) 
 	{
@@ -402,8 +402,8 @@ if ($whos_playing)
 			 if ($games_players[$key]!='') 
 			 {
                $content .= "<tr>\n";
-               $content .= "<td width=\"30%\" class=\"arcadeRow2\"><a href=\"modules.php?name=Forums&amp;file=games&amp;gid=$key\">$val</a></td>\n";
-               $content .= "<td class=\"arcadeRow2\">" .$games_players[$key]. "</td>\n";
+               $content .= "<td width=\"30%\" class=\"arcadeRow1 arcadeTitleLink\"><a href=\"modules.php?name=Forums&amp;file=games&amp;gid=$key\">$val</a></td>\n";
+               $content .= "<td class=\"arcadeRow1 arcadeTitleLink\">" .$games_players[$key]. "</td>\n";
                $content .= "</tr>\n";
              }
            }

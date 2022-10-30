@@ -63,6 +63,18 @@ global $fieldset_color, $fieldset_border_width, $digits_color;
   font-weight: bold;
 }
 
+.arcadeTextWhite:hover {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  padding-top: 5px;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: auto;
+  font-weight: bold;
+}
+
 .arcadeTextPink {
   color: pink;
   font-size: 15px;
@@ -116,7 +128,6 @@ global $fieldset_color, $fieldset_border_width, $digits_color;
   padding: 4px;
   box-shadow: inset 1px 1px 3px #000;
   text-shadow: 2px 2px 4px #000000;
-
 
 }
 
