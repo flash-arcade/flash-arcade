@@ -127,7 +127,8 @@ img.rounded-corners-shout {
 }
 
 img.rounded-corners-profile {
-  border-radius: 20px; 
+  border-radius: 13px;
+  width: 200px; 
 }
 
 img.rounded-corners-header { 
@@ -143,7 +144,7 @@ img.rounded-corners-arcade {
 }
 
 img.rounded-corners-gamepic { 
-  border-radius: 7px; 
+  border-radius: 4px; 
 }
 
 img.rounded-corners-forum {
@@ -159,7 +160,8 @@ img.rounded-corners-last-vistors {
 }
 
 img.rounded-corners-user-info {
-  border-radius: 20px; 
+  border-radius: 20px;
+  width: 200px; 
 }
 .w3-serif{font-family:serif}.w3-sans-serif{font-family:sans-serif}.w3-cursive{font-family:cursive}.w3-monospace{font-family:monospace}
 .w3-wide{letter-spacing:4px}

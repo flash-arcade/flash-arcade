@@ -22,7 +22,7 @@ include('includes/functions_arcade.' . $phpEx);
 require( $phpbb_root_path . 'gf_funcs/gen_funcs.' . $phpEx );
 include('includes/constants.php');
 
-$userdata = session_pagestart($user_ip, PAGE_GAME, $nukeuser);
+$userdata = session_pagestart($user_ip, PAGE_GAME);
 //init_userprefs($userdata);
 
 $sessdo = get_var_gf(array('name'=>'sessdo', 'method'=>'POST', 'default'=>''));

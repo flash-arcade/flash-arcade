@@ -99,13 +99,13 @@ if ( $user_avatar_type && $user_allowavatar )
    switch( $user_avatar_type )
    {
       case USER_AVATAR_UPLOAD:
-         $avatar_img = ( $board_config['allow_avatar_upload'] ) ? '<img src="' . $board_config['avatar_path'] . '/' . $user_avatar . '" alt="" border="0" hspace="20" align="center" valign="center"/>' : '';
+         $avatar_img = ( $board_config['allow_avatar_upload'] ) ? '<img class="rounded-corners-user-info" src="' . $board_config['avatar_path'] . '/' . $user_avatar . '" alt="" border="0" hspace="20" align="center" valign="center"/>' : '';
          break;
       case USER_AVATAR_REMOTE:
-         $avatar_img = ( $board_config['allow_avatar_remote'] ) ? '<img src="' . $user_avatar . '" alt="" border="0"  hspace="20" align="center" valign="center" />' : '';
+         $avatar_img = ( $board_config['allow_avatar_remote'] ) ? '<img class="rounded-corners-user-info" src="' . $user_avatar . '" alt="" border="0"  hspace="20" align="center" valign="center" />' : '';
          break;
       case USER_AVATAR_GALLERY:
-         $avatar_img = ( $board_config['allow_avatar_local'] ) ? '<img src="' . $board_config['avatar_gallery_path'] . '/' . $user_avatar . '" alt="" border="0"  hspace="20" align="center" valign="center" />' : '';
+         $avatar_img = ( $board_config['allow_avatar_local'] ) ? '<img class="rounded-corners-user-info" src="' . $board_config['avatar_gallery_path'] . '/' . $user_avatar . '" alt="" border="0"  hspace="20" align="center" valign="center" />' : '';
          break;
    }
 
