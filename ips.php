@@ -16,8 +16,8 @@
    Notes         : Should contain the IPs for the admin ip lock & user lock
 ************************************************************************/
 
-if (realpath(__FILE__) == realpath($_SERVER['SCRIPT_FILENAME'])) {
-    exit('Access Denied');
+if ( realpath( __FILE__ ) == realpath( $_SERVER[ 'SCRIPT_FILENAME' ] ) ) {
+  exit( 'Access Denied' );
 }
 
 global $ips, $users_ips;
