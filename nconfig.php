@@ -22,8 +22,8 @@ define('network', 'enabled');
 if ( defined('network') ):
 $dbhost2 = 'localhost';
 $dbname2 = 'hub_db';
-$dbuname2 = 'hub_user';
-$dbpass2 = '';
+$dbuname2 = 'hub_user'; // you must goto https://www.php-nuke-titanium.86it.us and request a username!
+$dbpass2 = ''; // you must goto https://www.php-nuke-titanium.86it.us and request a password!
 $network_prefix = 'network';
 endif;
 ?>
