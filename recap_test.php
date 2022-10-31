@@ -1,4 +1,4 @@
-<?php
+<?php 
 include( 'mainfile.php' );
 
 if ( is_admin() ) {
