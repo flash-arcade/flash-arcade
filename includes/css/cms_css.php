@@ -4,8 +4,67 @@
 #---------------------------------------------------------------------------------------#
 echo "\n\n/* includes/css/cms_css.php Fly Kit for PHP-Nuke Titanium - Design Themes On The Fly */\n"; 
 echo "/* When we are done we will move this code to style.css */\n\n";
-global $fieldset_color, $fieldset_border_width, $digits_color; 
+global $br, $fieldset_color, $fieldset_border_width, $digits_color;
+$br = '<div align="center" style="padding-top:2px;"></div>';
 ?>
+table.rounded-corners {
+ /* Change these properties */
+ --border: 1px solid black;
+ border-radius: 10px;
+
+ /* Don't change these properties */
+ border-spacing: 0;
+ border-collapse: separate;
+ border: var(--border);
+ overflow: hidden;
+}
+
+/* Apply a border to the right of all but the last column */
+table.rounded-corners th:not(:last-child),
+table.rounded-corners td:not(:last-child) {
+ border-right: var(--border);
+}
+
+/* Apply a border to the bottom of all but the last row */
+table.rounded-corners>thead>tr:not(:last-child)>th,
+table.rounded-corners>thead>tr:not(:last-child)>td,
+table.rounded-corners>tbody>tr:not(:last-child)>th,
+table.rounded-corners>tbody>tr:not(:last-child)>td,
+table.rounded-corners>tfoot>tr:not(:last-child)>th,
+table.rounded-corners>tfoot>tr:not(:last-child)>td,
+table.rounded-corners>tr:not(:last-child)>td,
+table.rounded-corners>tr:not(:last-child)>th,
+table.rounded-corners>thead:not(:last-child),
+table.rounded-corners>tbody:not(:last-child),
+table.rounded-corners>tfoot:not(:last-child) {
+ border-bottom: var(--border);
+}
+
+/*---------------------------------------------------------------*/
+/* Game Description START                                        */
+/*---------------------------------------------------------------*/
+.disclaimer {
+  color: goldenrod;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.disclaimer:hover {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 /*---------------------------------------------------------------*/
 /* Global CMS CSS                                                */
 /*                                                               */
@@ -17,7 +76,26 @@ global $fieldset_color, $fieldset_border_width, $digits_color;
 /* NO NEED FOR WRITTEN PERMISSION                                */
 /* I did not trade a goat for this code!                         */
 /*---------------------------------------------------------------*/
+.alertPulse-css {
+    animation: alertPulse 2s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 1;
+    background: #9A2727; /* you need this to specify a color to pulse to */
+}
 
+.banner {
+  font-family: system-ui;
+  margin: 1rem;
+  border-radius: 100px;
+  font-size: 2.2rem;
+  color: white;
+  text-align: center;
+  padding: 1rem 3rem;
+}
+body {
+  padding: 0.1rem;
+  background: #222222;
+}
 /*---------------------------------------------------------------*/
 /* Global CMS CSS                                                */
 /*---------------------------------------------------------------*/
@@ -32,7 +110,7 @@ global $fieldset_color, $fieldset_border_width, $digits_color;
 }
 
 .arcadePink {
-  color: pink;
+  color: #FF99FF;
   font-size: 15px;
   text-decoration: none;
   padding: 4px;
@@ -51,19 +129,45 @@ global $fieldset_color, $fieldset_border_width, $digits_color;
   font-weight: bold;
 }
 
-.arcadeTextWhite {
+.arcadeTextDate {
   color: white;
-  font-size: 14px;
+  font-size: 12px;
   text-decoration: none;
   padding-top: 5px;
   padding: 4px;
   text-shadow: 2px 2px 4px #000000;
   background-color: mone;
-  cursor: none;
+  cursor: auto;
   font-weight: bold;
 }
 
-.arcadeTextWhite:hover {
+.arcadeTopTenHeader {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding-top: 5px;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: auto;
+  font-weight: bold;
+}
+
+
+.arcadeUserName {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding-top: 5px;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: auto;
+  font-weight: bold;
+}
+
+
+.arcadeTextWhite {
   color: white;
   font-size: 14px;
   text-decoration: none;
@@ -75,8 +179,36 @@ global $fieldset_color, $fieldset_border_width, $digits_color;
   font-weight: bold;
 }
 
+/*---------------------------------------------------------------*/
+/* Game Description START                                        */
+/*---------------------------------------------------------------*/
+.arcadeTextDescription {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: auto;
+  font-weight: bold;
+}
+
+.arcadeTextDescription:hover {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: auto;
+  font-weight: bold;
+}
+/*---------------------------------------------------------------*/
+/* Game Description END                                        */
+/*---------------------------------------------------------------*/
+
 .arcadeTextPink {
-  color: pink;
+  color: #FF99FF;
   font-size: 15px;
   text-decoration: none;
   padding: 4px;
@@ -93,7 +225,96 @@ global $fieldset_color, $fieldset_border_width, $digits_color;
   padding: 4px;
   text-shadow: 2px 2px 4px #000000;
   background-color: mone;
-  cursor: none;
+  cursor: auto;
+  font-weight: bold;
+}
+
+.arcadeTitlePink {
+  color: #FF99FF;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: auto;
+  font-weight: bold;
+}
+
+.arcadeTitlePink:hover {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup {
+  color: yellow;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup:hover {
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup:active {
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup:visted {
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.clicktoplay {
+  color: cyan;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.clicktoplay:hover {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: mone;
+  cursor: pointer;
   font-weight: bold;
 }
 
@@ -306,6 +527,12 @@ img.rounded-corners-user-info {
   border-radius: 20px;
   width: 200px; 
 }
+
+img.rounded-corners-arcade-center_block {
+  border-radius: 9px;
+  width: 80px; 
+}
+
 .w3-serif{font-family:serif}.w3-sans-serif{font-family:sans-serif}.w3-cursive{font-family:cursive}.w3-monospace{font-family:monospace}
 .w3-wide{letter-spacing:4px}
 .w3-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}

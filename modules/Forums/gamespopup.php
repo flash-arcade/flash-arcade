@@ -31,6 +31,7 @@ if ($popup != "1"){
 else
 {
     $phpbb_root_path = NUKE_FORUMS_DIR;
+    echo '<script src="includes/ruffle-core/ruffle.js"></script>'."\n";
 }
 
 define('IN_PHPBB', true);
@@ -277,11 +278,16 @@ $ourrow = $db->sql_fetchrow($result);
 $cat_title = $ourrow['arcade_cattitle'];
 
 $template->assign_vars(array(
-        'SWF_GAME' => $row['game_swf'] ,
-        'GAMEHASH' => $gamehash_id,
-        'L_GAME' => $row['game_name'],
-                'HIGHUSER' => (!empty($row['username'])) ? "'s Highscore: ".$row['username']." - ": " : No Highscore",
-                'HIGHSCORE' => $row['highscore'])
+        
+  'SWF_GAME' => $row['game_swf'] ,
+  
+  'GAMEHASH' => $gamehash_id,
+  
+  'L_GAME' => $row['game_name'],
+  
+  'HIGHUSER' => (!empty($row['username'])) ? "'s Highscore: ".$row['username']." - ": " : No Highscore",
+  
+  'HIGHSCORE' => $row['highscore'])
 );
 
 //

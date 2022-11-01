@@ -8,22 +8,29 @@ function Arcade_Popup(mypage,myname,w,h,scroll)
   settings = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',status='+scroll+',resizable=yes';
   win = window.open(mypage,myname,settings);
 }
+    
+function createPopupWin(mypage,myname,popupWinWidth, popupWinHeight) {
+            var left = (screen.width ) ;
+            var top = (screen.height ) ;
+            var myWindow = window.open(mypage, myname,
+                    'resizable=yes, width=' + popupWinWidth
+                    + ', height=' + popupWinHeight + ', top='
+                    + top + ', left=' + left);
+        }    
 </script>
  <!-- index phrase display -->
 {HEADINGARCADE}
-
   <table width="100%" cellspacing="2" cellpadding="2" border="0">
     <tr>
           <td align="left" valign="middle" width="100%">
-                <span class="nav">
-                        <a href="{U_INDEX}" class="nav">{L_INDEX}</a>
+                <span class="arcadeTitleLink">
+                        <a href="{U_INDEX}" class="arcadeTitleLink">{L_INDEX}</a>
                 </span>
-                <span class="nav">&nbsp;->&nbsp;{NAV_DESC}&nbsp;->&nbsp;{CATTITLE}</span>
+                <span class="arcadeTitleLink">&nbsp;->&nbsp;{NAV_DESC}&nbsp;->&nbsp;{CATTITLE}</span>
           </td>
     </tr>
   </table>
 {WHOISPLAYING}
-<br />
   <!-- BEGIN arcade_search -->
 <table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
   <tr>
@@ -34,7 +41,7 @@ function Arcade_Popup(mypage,myname,w,h,scroll)
 
 <table width="100%" cellpadding="2" cellspacing="1" border="0" class="forumline">
   <tr>
-        <th class="thTop" colspan="{ARCADE_COL}" nowrap="nowrap">&nbsp;{L_ARCADE}&nbsp;</th>
+        <th class="arcadeThTop" colspan="{ARCADE_COL}" nowrap="nowrap">&nbsp;{L_ARCADE}&nbsp;</th>
   </tr>
   <!-- BEGIN use_category_mod -->
   <tr> 
